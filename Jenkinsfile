@@ -15,19 +15,19 @@ pipeline {
 
 		stage('Build') {
             steps {
-             - chmod +x ./gradlew build
+             - chmod +x './gradlew build'
             }
         }
 
         stage('Test') {
             steps {
-            - chmod +x ./gradlew test
+            - chmod +x './gradlew test'
             }
         }
 
         stage('Check') {
             steps {
-            - chmod +x ./gradlew check
+            - chmod +x './gradlew check'
             }
         }
 
