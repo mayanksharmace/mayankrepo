@@ -6,35 +6,35 @@ pipeline {
 				echo 'Hi, this is Soumitra from roytuts'
 			}
 		}
-		
+
 		stage('Two') {
 			steps {
 				input('Do you want to proceed?')
 			}
 		}
-		
+
 		stage('Build') {
             steps {
-                sh './gradlew build'
+            chmod +x sh './gradlew build'
             }
         }
-        
+
         stage('Test') {
             steps {
-                sh './gradlew test'
+            chmod +x './gradlew test'
             }
         }
-        
+
         stage('Check') {
             steps {
-                sh './gradlew check'
+            chmod +x './gradlew check'
             }
-        }      
-		
+        }
+
 		stage('Five') {
 			steps {
 				echo 'Finished'
 			}
-		}		
+		}
 	}
 }
