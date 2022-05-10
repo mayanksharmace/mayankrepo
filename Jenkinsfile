@@ -15,11 +15,13 @@ pipeline {
 
 		stage('Build') {
             steps {
-		sh './gradlew build'
+		sh "chmod +x gradlew"
+            sh "./gradlew clean build --no-daemon"
+		/*sh './gradlew build'*/
             }
         }
 
-        stage('Test') {
+       /* stage('Test') {
             steps {
             sh './gradlew test'
             }
@@ -29,7 +31,7 @@ pipeline {
             steps {
              sh './gradlew check'
             }
-        }
+        } */
 
 		stage('Five') {
 			steps {
